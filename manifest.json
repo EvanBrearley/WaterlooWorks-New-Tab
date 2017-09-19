@@ -1,6 +1,6 @@
 {
   "name": "A browser action that sets WaterlooWorks links to open in new tab.",
-  "description": "Extract a page's text into a new window",
+  "description": "Fixes WaterlooWorks links",
   "version": "3.14159",
   "permissions": [
     "tabs", "http://*/*", "https://*/*"
@@ -10,5 +10,11 @@
       "default_icon": "icon.png",
       "default_popup": "popup.html"
   },
+  "content_scripts" : [
+      {
+        "js" : ["fixLinks.js"],
+        "matches": ["*://*/*"]
+      }
+  ],
   "manifest_version": 2
 }
