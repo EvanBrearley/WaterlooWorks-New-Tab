@@ -3,7 +3,7 @@
   "description": "Fixes WaterlooWorks links",
   "version": "3.14159",
   "permissions": [
-    "tabs", "http://*/*", "https://*/*"
+    "tabs", "https://waterlooworks.uwaterloo.ca/*"
   ],
   "browser_action": {
       "default_title": "Fix WaterlooWorks.",
@@ -13,7 +13,7 @@
   "content_scripts" : [
       {
         "js" : ["fixLinks.js"],
-        "matches": ["*://*/*"]
+        "matches": ["https://waterlooworks.uwaterloo.ca/*"]
       }
   ],
   "manifest_version": 2
